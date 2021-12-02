@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdventOfCodeDay1\AdventOfCodeDay1.csproj" />
+    <ProjectReference Include="..\AdventOfCodeDay2\AdventOfCodeDay2.csproj" />
+    <ProjectReference Include="..\AdventOfCodeHelpers\AdventOfCodeHelpers.csproj" />
+  </ItemGroup>
+
+</Project>
