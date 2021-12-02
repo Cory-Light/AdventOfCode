@@ -6,7 +6,7 @@
 
         public async Task<List<TOutput>> ReadInputFromFile()
         {
-            await using var file = File.OpenRead("C:\\Users\\Cory_\\source\\repos\\AdventOfCodeDay1\\AdventOfCodeHelpers\\Day1Input.txt");
+            await using var file = File.OpenRead("C:\\Users\\clight\\Documents\\GitHub\\AdventOfCode\\AdventOfCodeHelpers\\Day2Input.txt");
             using var reader = new StreamReader(file);
 
             var outputs = new List<TOutput>();
@@ -38,6 +38,17 @@
         protected override int ProcessLineOfFile(string line)
         {
             return int.Parse(line);
+        }
+
+        #endregion
+    }
+    public class StringFileReader : FileReader<string>
+    {
+        #region Instance Methods
+
+        protected override string ProcessLineOfFile(string line)
+        {
+            return (line);
         }
 
         #endregion

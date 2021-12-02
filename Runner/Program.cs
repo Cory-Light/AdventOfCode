@@ -6,6 +6,7 @@ using AdventOfCodeDay2;
 //await Day1.Part1();
 //await Day1.Part2();
 
-//Day 1 Stuff 
+//Day 2 Stuff 
 
-await Day2.Part1();
+//await Day2.Part1();
+//await Day2.Part2();
