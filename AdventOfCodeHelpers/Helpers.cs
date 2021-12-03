@@ -6,7 +6,7 @@
 
         public async Task<List<TOutput>> ReadInputFromFile()
         {
-            await using var file = File.OpenRead("C:\\Users\\clight\\Documents\\GitHub\\AdventOfCode\\AdventOfCodeHelpers\\Day2Input.txt");
+            await using var file = File.OpenRead("C:\\Users\\Cory_\\source\\repos\\AdventOfCodeDay1\\AdventOfCodeHelpers\\Inputs\\Day3Input.txt");
             using var reader = new StreamReader(file);
 
             var outputs = new List<TOutput>();
@@ -52,5 +52,12 @@
         }
 
         #endregion
+    }
+    public class CharArrayFileReader : FileReader<char[]>
+    {
+        protected override char[] ProcessLineOfFile(string line)
+        {
+            return line.ToCharArray();
+        }
     }
 }

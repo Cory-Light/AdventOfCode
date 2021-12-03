@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCodeDay1", "AdventOfCodeDay1\AdventOfCodeDay1.csproj", "{A53F2CD2-A4E7-4D6F-B733-BEFDC9DCB5D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCodeDay1", "AdventOfCodeDay1\AdventOfCodeDay1.csproj", "{A53F2CD2-A4E7-4D6F-B733-BEFDC9DCB5D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2021", "2021", "{0F46CD31-84EB-46DB-B950-D1D3695EB7B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCodeHelpers", "AdventOfCodeHelpers\AdventOfCodeHelpers.csproj", "{9A030BB1-FB6B-4668-B36B-631FE70888BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCodeHelpers", "AdventOfCodeHelpers\AdventOfCodeHelpers.csproj", "{9A030BB1-FB6B-4668-B36B-631FE70888BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runner", "Runner\Runner.csproj", "{720A0DF2-8AAA-483D-A5F5-2A8FB24673C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runner", "Runner\Runner.csproj", "{720A0DF2-8AAA-483D-A5F5-2A8FB24673C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCodeDay2", "AdventOfCodeDay2\AdventOfCodeDay2.csproj", "{F6D000A8-7B7B-40A8-840F-D3F7F7B4D861}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCodeDay2", "AdventOfCodeDay2\AdventOfCodeDay2.csproj", "{F6D000A8-7B7B-40A8-840F-D3F7F7B4D861}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCodeDay3", "AdventOfCodeDay3\AdventOfCodeDay3.csproj", "{49BAF8B6-C61B-4DFF-8113-06243A01833C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode", "AdventOfCode\AdventOfCode.csproj", "{6740AA69-1F34-47C9-BED7-9C568FD36DEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{F6D000A8-7B7B-40A8-840F-D3F7F7B4D861}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D000A8-7B7B-40A8-840F-D3F7F7B4D861}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D000A8-7B7B-40A8-840F-D3F7F7B4D861}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BAF8B6-C61B-4DFF-8113-06243A01833C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BAF8B6-C61B-4DFF-8113-06243A01833C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BAF8B6-C61B-4DFF-8113-06243A01833C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BAF8B6-C61B-4DFF-8113-06243A01833C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6740AA69-1F34-47C9-BED7-9C568FD36DEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6740AA69-1F34-47C9-BED7-9C568FD36DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6740AA69-1F34-47C9-BED7-9C568FD36DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6740AA69-1F34-47C9-BED7-9C568FD36DEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +54,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A53F2CD2-A4E7-4D6F-B733-BEFDC9DCB5D2} = {0F46CD31-84EB-46DB-B950-D1D3695EB7B9}
 		{F6D000A8-7B7B-40A8-840F-D3F7F7B4D861} = {0F46CD31-84EB-46DB-B950-D1D3695EB7B9}
+		{49BAF8B6-C61B-4DFF-8113-06243A01833C} = {0F46CD31-84EB-46DB-B950-D1D3695EB7B9}
+		{6740AA69-1F34-47C9-BED7-9C568FD36DEF} = {0F46CD31-84EB-46DB-B950-D1D3695EB7B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97DF7503-5A12-4E53-BE9D-C438A5BC240F}
