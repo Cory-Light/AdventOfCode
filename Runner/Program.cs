@@ -12,7 +12,7 @@
 //Day 3 Stuff 
 
 //await Day3.Part1();
-await Day3.Part2(); 
+//await Day3.Part2(); 
 
 //await Day3.DylansStupidSolutionThatIsDumb();
 
@@ -20,4 +20,4 @@ await Day3.Part2();
 
 
 //await Day4.Part1();
-//await Day4.Part2();
+await Day4.Part2();

@@ -6,7 +6,7 @@
 
         public async Task<List<TOutput>> ReadInputFromFile()
         {
-            await using var file = File.OpenRead("C:\\Users\\Cory_\\source\\repos\\AdventOfCodeDay1\\AdventOfCodeHelpers\\Inputs\\Day3Input.txt");
+            await using var file = File.OpenRead("C:\\Users\\Cory_\\source\\repos\\AdventOfCodeDay1\\AdventOfCodeHelpers\\Inputs\\Day4Input.txt");
             using var reader = new StreamReader(file);
 
             var outputs = new List<TOutput>();
