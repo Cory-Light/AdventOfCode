@@ -20,4 +20,9 @@
 
 
 //await Day4.Part1();
-await Day4.Part2();
+//await Day4.Part2();
+
+//Day5
+
+//await Day5.Part1();
+await Day5.Part2();

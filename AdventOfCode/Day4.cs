@@ -127,8 +127,6 @@ namespace AdventOfCode
                     Row3 = new List<BingoSlot>();
                     Row4 = new List<BingoSlot>();
                     Row5 = new List<BingoSlot>();
-                    it = 0;
-
                 }
             }
 
@@ -257,8 +255,6 @@ namespace AdventOfCode
                     Row3 = new List<BingoSlot>();
                     Row4 = new List<BingoSlot>();
                     Row5 = new List<BingoSlot>();
-                    it = 0;
-
                 }
             }
 
@@ -371,7 +367,7 @@ namespace AdventOfCode
                             bingoBoards[i].Print();
                         }
                     }
-                    if (bingoBoards[i].CheckWinnerPart2(int.Parse(input)))
+                    if (bingoBoards[i].CheckWinnerPart2())
                     {
                         if(!finishedBoards.Contains(bingoBoards[i]))
                         {
@@ -505,7 +501,7 @@ namespace AdventOfCode
                     return false;
                 }
             }
-            public bool CheckWinnerPart2(int input)
+            public bool CheckWinnerPart2()
             {
                 if (this.Row1.All(r => r.Marked == true))
                 {
