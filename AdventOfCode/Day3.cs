@@ -31,9 +31,6 @@ namespace AdventOfCode
                     }
                     gammaSequence += numOf1 > numOf0 ? "1" : "0";
                     epsilonSequence += numOf1 > numOf0 ? "0" : "1";
-                    Console.WriteLine($"There are {numOf0} zeros");
-                    Console.WriteLine($"There are {numOf1} ones");
-                    Console.WriteLine("\n");
                 }
                 Console.WriteLine($"The gamma sequence is {gammaSequence}");
                 Console.WriteLine($"The epsilon sequence is {epsilonSequence}");
@@ -59,7 +56,6 @@ namespace AdventOfCode
 
         public static string SortArrayAtIndexForOxygen(List<string> array, int index)
         {
-            //Console.WriteLine($"Starting to sort at index {index} for Oxygen.");
             var newList = new List<string>();
             var numOf0 = 0;
             var numOf1 = 0;
@@ -75,10 +71,7 @@ namespace AdventOfCode
                     numOf1++;
                 }
             }
-            //Console.WriteLine($"There are {numOf0} zeros");
-            //Console.WriteLine($"There are {numOf1} ones \n");
             var searchNumber = numOf1 >= numOf0 ? '1' : '0';
-            //Console.WriteLine($"Searching Number is {searchNumber}.\n");
             foreach (var item in array)
             {
                 if (item[index] == searchNumber)
@@ -86,11 +79,6 @@ namespace AdventOfCode
                     newList.Add(item);
                 }
             }
-            //Console.WriteLine("New List");
-            //foreach (var item in newList)
-            //{
-            //    Console.WriteLine(item + "\n");
-            //}
 
             if (newList.Count == 1)
             {
@@ -100,7 +88,6 @@ namespace AdventOfCode
         }
         public static string SortArrayAtIndexForCO2(List<string> array, int index)
         {
-            //Console.WriteLine($"Starting to sort at index {index} for CO2.");
             var newList = new List<string>();
             var numOf0 = 0;
             var numOf1 = 0;

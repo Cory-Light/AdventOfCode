@@ -12,7 +12,6 @@ namespace AdventOfCode
             var vertical = 0; 
             foreach (var item in arr)
             {
-                //Console.WriteLine(item);
                 var parts = item.Split(' ');
                 foreach (var word in parts)
                 {
@@ -22,13 +21,8 @@ namespace AdventOfCode
                         vertical-=int.Parse(parts[1]);
                     if(word == "down")
                         vertical+=int.Parse(parts[1]);
-                    //Console.WriteLine(word);
                 };
-                //Console.WriteLine(horizontal);
-                //Console.WriteLine(vertical);
             }
-            //Console.WriteLine(horizontal);
-            //Console.WriteLine(vertical);
             Console.WriteLine($"Part 1 Final answer = {horizontal*vertical}");
         }
 
@@ -41,7 +35,6 @@ namespace AdventOfCode
             var aim = 0;
             foreach (var item in arr)
             {
-                //Console.WriteLine(item);
                 var parts = item.Split(' ');
                 foreach (var word in parts)
                 {
@@ -58,15 +51,8 @@ namespace AdventOfCode
                     {                       
                         aim+=int.Parse(parts[1]);
                     }
-                    //Console.WriteLine(word);
                 };
-                //Console.WriteLine($"Horizonal: {horizontal}");
-                //Console.WriteLine($"Vertical: {vertical}");
-                //Console.WriteLine($"Aim: {aim}");
-                //Console.WriteLine("\n");
             }
-            //Console.WriteLine(horizontal);
-            //Console.WriteLine(vertical);
             Console.WriteLine($"Part 2 Final answer = {horizontal*vertical}");
         }
 

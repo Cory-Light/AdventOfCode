@@ -138,7 +138,6 @@ namespace AdventOfCode
         {
             var arr = await new StringFileReader().ReadInputFromFile();
             var inputList = arr[0].Split(',');
-            //Console.WriteLine($"InputNums: {inputList}");
             List<BingoBoard> bingoBoards = new();
             var Row1 = new List<BingoSlot>();
             var Row2 = new List<BingoSlot>();
@@ -151,9 +150,7 @@ namespace AdventOfCode
                 var it = 0;
                 if (arr[i] != "")
                 {
-                    //Console.WriteLine(arr[i]);
                     var resultString = Regex.Replace(arr[i], @"\s+", ",");
-                    //Console.WriteLine($"Just Numbers: {resultString}");
                     var numList = resultString.Split('\u002C');
                     foreach (var num in numList)// each num in row
                     {
@@ -164,7 +161,6 @@ namespace AdventOfCode
                                     if (num != "")
                                     {
                                         Row1.Add(new BingoSlot(num, false));
-                                        //Console.WriteLine($"num: {num}");
                                         it++;
                                     }
                                     break;
@@ -174,7 +170,6 @@ namespace AdventOfCode
                                     if (num != "")
                                     {
                                         Row2.Add(new BingoSlot(num, false));
-                                        //Console.WriteLine($"Row2: {num}");
                                         it++;
                                     }
                                     break;
@@ -184,7 +179,6 @@ namespace AdventOfCode
                                     if (num != "")
                                     {
                                         Row3.Add(new BingoSlot(num, false));
-                                        //Console.WriteLine($"Row3: {num}");
                                         it++;
                                     }
                                     break;
@@ -194,7 +188,6 @@ namespace AdventOfCode
                                     if (num != "")
                                     {
                                         Row4.Add(new BingoSlot(num, false));
-                                        //Console.WriteLine($"Row4: {num}");
                                         it++;
                                     }
                                     break;
@@ -204,7 +197,6 @@ namespace AdventOfCode
                                     if (num != "")
                                     {
                                         Row5.Add(new BingoSlot(num, false));
-                                        //Console.WriteLine($"Row5: {num}");
                                         it++;
                                     }
                                     break;
@@ -221,34 +213,7 @@ namespace AdventOfCode
                 }
                 else
                 {
-                    //Console.WriteLine("Finishing board.");
-                    //foreach (var val in Row1)
-                    //{
-                    //    Console.Write($"({val.Number}, {val.Marked})");
-                    //}
-                    //Console.Write("\n");
-                    //foreach (var val in Row2)
-                    //{
-                    //    Console.Write($"({val.Number}, {val.Marked})");
-                    //}
-                    //Console.Write("\n");
-                    //foreach (var val in Row3)
-                    //{
-                    //    Console.Write($"({val.Number}, {val.Marked})");
-                    //}
-                    //Console.Write("\n");
-                    //foreach (var val in Row4)
-                    //{
-                    //    Console.Write($"({val.Number}, {val.Marked})");
-                    //}
-                    //Console.Write("\n");
-                    //foreach (var val in Row5)
-                    //{
-                    //    Console.Write($"({val.Number}, {val.Marked})");
-                    //}
-                    //Console.Write("\n");
                     var newBoard = new BingoBoard(Row1, Row2, Row3, Row4, Row5);
-                    //newBoard.Print();
                     bingoBoards.Add(newBoard);
                     Row1 = new List<BingoSlot>();
                     Row2 = new List<BingoSlot>();
@@ -319,7 +284,6 @@ namespace AdventOfCode
             var finishedBoards = new List<BingoBoard>();
             foreach (var input in inputList)
             {
-                Console.WriteLine($"Checking for input {input}.");
                 for (int i = 0; i < bingoBoards.Count; i++)
                 {
                     for (int j = 0; j < bingoBoards[i].Row1.Count; j++)
@@ -378,8 +342,6 @@ namespace AdventOfCode
                             i--;
                         }
                     }
-
-                    //bingoBoards[i].Print();
                 }
                 Console.WriteLine($"Finished Boards:{finishedBoards.Count} vs All boards {bingoBoards.Count}");
                 if(finishedBoards.Count == initialSize)

@@ -35,8 +35,6 @@ namespace AdventOfCode
                 {
                     increases++;
                 }
-                //Console.WriteLine(section1);
-                //Console.WriteLine(section2);
             }
 
             Console.WriteLine(increases);

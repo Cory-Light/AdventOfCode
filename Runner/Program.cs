@@ -24,5 +24,5 @@
 
 //Day5
 
-//await Day5.Part1();
+await Day5.Part1();
 await Day5.Part2();

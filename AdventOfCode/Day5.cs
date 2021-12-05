@@ -10,14 +10,6 @@ namespace AdventOfCode
             var arrSize = 1000;
             int[,] arr = new int[arrSize, arrSize];
 
-            for (int i = 0; i < arrSize; i++)
-            {
-                for (int j = 0; j < arrSize; j++)
-                {
-                    
-                }
-            }
-
             foreach (var line in fileLines)
             {
                 //Console.WriteLine($"{line.Split(" -> ")[1]} : {line.Split(" -> ")[1]}");
