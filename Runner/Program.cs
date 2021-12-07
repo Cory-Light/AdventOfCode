@@ -14,8 +14,6 @@
 //await Day3.Part1();
 //await Day3.Part2(); 
 
-//await Day3.DylansStupidSolutionThatIsDumb();
-
 //Day 4
 
 
@@ -31,4 +29,9 @@
 //Day6
 
 //await Day6.Part1();
-await Day6.Part2();
+//await Day6.Part2();
+
+//Day7
+
+//await Day7.Part1();
+//await Day7.Part2();
