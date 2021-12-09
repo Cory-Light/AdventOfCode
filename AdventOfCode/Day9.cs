@@ -1,21 +1,28 @@
-﻿using AdventOfCodeHelpers;
+﻿using AdventOfCodeHelpers.Solver;
+using AdventOfCodeHelpers;
+using System.Text;
+using AdventOfCode;
 
 namespace AdventOfCode
 {
-    public class Day9
+    public class Day9 : ProblemBase
     {
         static int arrSizeX = 0;
         static int arrSizeY = 0;
         static List<Coordinates> handledCoords = new();
-        public static async Task Part1()
+        int[,] arr = new int[1000, 1000];
+        static List<int> listOfLowest = new();
+
+        public override async Task ReadInput()
         {
-            var fileLines = await new CharArrayFileReader().ReadInputFromFile();
-            arrSizeX = fileLines.First().Length;
-            arrSizeY = fileLines.Count;
-            int[,] arr = new int[arrSizeX, arrSizeY];
+            var coordPoints = await new CharArrayFileReader().ReadInputFromFile();
+
+            arrSizeX = coordPoints.First().Length;
+            arrSizeY = coordPoints.Count;
+            int[,] arr2 = new int[arrSizeX, arrSizeY];
             var yVal = 0;
 
-            foreach (var line in fileLines)
+            foreach (var line in coordPoints)
             {
                 for (int i = 0; i < arrSizeX; i++)
                 {
@@ -24,18 +31,31 @@ namespace AdventOfCode
                 }
                 yVal++;
             }
-            //Print(arr);
-            CheckForLowest(arr);
         }
+
+        protected override Task<string> SolvePartOneInternal()
+        {
+            var lowestCoords = CheckForLowest(arr);
+            var lowPointSum = listOfLowest.Select(x => x).Sum().ToString();
+            return Task.FromResult(lowPointSum);
+        }
+
+        protected override Task<string> SolvePartTwoInternal()
+        {
+            var cords = CheckForLowest(arr);
+            var basinList = FindBasins(cords, arr);
+            var basinListProduct = basinList.Aggregate(1, (acc, val) => acc * val.Item2).ToString();
+
+            return Task.FromResult(basinListProduct);
+        }
+
         public static List<Coordinates> CheckForLowest(int[,] arr)
         {
-            var listOfLowest = new List<int>();
             List<Coordinates> cords = new();
             for (int y = 0; y < arrSizeY; y++)
             {
                 for (int x = 0; x < arrSizeX; x++)
                 {
-                    //Console.WriteLine(x);
                     if (x == 0 && y == 0) //1
                     {
                         if (arr[x, y] < arr[x + 1, y] && arr[x, y] < arr[x, y + 1])
@@ -119,52 +139,8 @@ namespace AdventOfCode
                     }
                 }
             }
-            Console.WriteLine($"The sum is {listOfLowest.Sum()}");
+            //Console.WriteLine($"The sum is {listOfLowest.Sum()}");
             return cords;
-        }
-
-        public static void Print(int[,] arr)
-        {
-            for (int y = 0; y < arrSizeY; y++)
-            {
-                for (int x = 0; x < arrSizeX; x++)
-                {
-                    Console.Write(arr[x, y]);
-                }
-                Console.WriteLine();
-            }
-        }
-
-        public static async Task Part2()
-        {
-            var fileLines = await new CharArrayFileReader().ReadInputFromFile();
-            arrSizeX = fileLines.First().Length;
-            arrSizeY = fileLines.Count;
-            int[,] arr = new int[arrSizeX, arrSizeY];
-            var yVal = 0;
-
-            foreach (var line in fileLines)
-            {
-                for (int i = 0; i < arrSizeX; i++)
-                {
-                    var value = line[i] - '0';
-                    arr[i, yVal] = value;
-                }
-                yVal++;
-            }
-            //Print(arr);
-            var cords = CheckForLowest(arr);
-            foreach (var c in cords)
-            {
-                Console.WriteLine($"X: {c.xVal} Y: {c.yVal}");
-            }
-            var basinList = FindBasins(cords, arr);
-            foreach (var basin in basinList)
-            {
-                Console.WriteLine(basin.Item2);
-            }
-            Console.WriteLine($"The product of basins is {basinList.Aggregate(1, (acc, val) => acc * val.Item2)}");
-
         }
 
         public static IEnumerable<(Coordinates, int)> FindBasins(List<Coordinates> cords, int[,] arr)
@@ -173,7 +149,7 @@ namespace AdventOfCode
             foreach (var c in cords)
             {
                 var bSize = CheckCoords(c, arr);
-                Console.WriteLine($"BasinSize for cord X: {c.xVal} Y: {c.yVal} is {bSize}");
+                //Console.WriteLine($"BasinSize for cord X: {c.xVal} Y: {c.yVal} is {bSize}");
                 basinList.Add((c, bSize));
                 handledCoords = new List<Coordinates>();
             }
@@ -182,7 +158,7 @@ namespace AdventOfCode
         }
         public static int CheckCoords(Coordinates cord, int[,] arr)
         {
-            Console.WriteLine($"Running CheckCords on cord X: {cord.xVal} Y: {cord.yVal}");
+            //Console.WriteLine($"Running CheckCords on cord X: {cord.xVal} Y: {cord.yVal}");
             if (!handledCoords.Any(c => c.xVal == cord.xVal && c.yVal == cord.yVal))
             {
                 handledCoords.Add(cord);
