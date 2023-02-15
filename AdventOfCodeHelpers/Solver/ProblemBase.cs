@@ -8,7 +8,7 @@ namespace AdventOfCodeHelpers.Solver
         {
             var partOneResult = await SolvePartOneInternal();
 
-            AnsiConsole.MarkupLine($"[blue]Part One Result: {partOneResult}.[/]");
+            AnsiConsole.MarkupLine($"[yellow]Part One Result: {partOneResult}.[/]");
 
             return partOneResult;
         }
@@ -19,7 +19,7 @@ namespace AdventOfCodeHelpers.Solver
         {
             var partTwoResult = await SolvePartTwoInternal();
 
-            AnsiConsole.MarkupLine($"[blue]Part Two Result: {partTwoResult}.[/]");
+            AnsiConsole.MarkupLine($"[yellow]Part Two Result: {partTwoResult}.[/]");
 
             return partTwoResult;
         }

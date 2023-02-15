@@ -7,14 +7,20 @@ namespace AdventOfCode
 {
     public class Day10 : ProblemBase
     {
-        public override Task ReadInput()
+        List<String> input = new();
+        public override async Task ReadInput()
         {
-            throw new NotImplementedException();
+            input = await new StringFileReader().ReadInputFromFile();
         }
 
         protected override Task<string> SolvePartOneInternal()
         {
-            throw new NotImplementedException();
+            Task<string> result = Task.FromResult("done");
+            foreach (var input in input)
+            {
+                Console.WriteLine(input);
+            }
+            return result;
         }
 
         protected override Task<string> SolvePartTwoInternal()

@@ -26,24 +26,24 @@ namespace AdventOfCode
             Console.WriteLine(numOfDigits);
         }
 
-        public static async Task Part2()
-        {
-            var fileLines = await new StringFileReader().ReadInputFromFile();
-            var numOfDigits = 0;
+        //public static async Task Part2()
+        //{
+        //    var fileLines = await new StringFileReader().ReadInputFromFile();
+        //    var numOfDigits = 0;
 
-            foreach (var line in fileLines)
-            {
-                var inputLine = line.Split(new[] { "|" }, StringSplitOptions.None)[0];
-                var outputLine = line.Split(new[] { "|" }, StringSplitOptions.None)[1];
-                var inputs = inputLine.Split(new[] { " " }, StringSplitOptions.None);
+        //    foreach (var line in fileLines)
+        //    {
+        //        var inputLine = line.Split(new[] { "|" }, StringSplitOptions.None)[0];
+        //        var outputLine = line.Split(new[] { "|" }, StringSplitOptions.None)[1];
+        //        var inputs = inputLine.Split(new[] { " " }, StringSplitOptions.None);
 
-                foreach (var input in inputs)
-                {
+        //        foreach (var input in inputs)
+        //        {
 
-                }
-            }
-            //var outputs = outputLine.Split(new[] { " " }, StringSplitOptions.None);
-            Console.WriteLine(numOfDigits);
-        }
+        //        }
+        //    }
+        //    //var outputs = outputLine.Split(new[] { " " }, StringSplitOptions.None);
+        //    Console.WriteLine(numOfDigits);
+        //}
     }
 }

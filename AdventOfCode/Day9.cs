@@ -10,8 +10,8 @@ namespace AdventOfCode
         static int arrSizeX = 0;
         static int arrSizeY = 0;
         static List<Coordinates> handledCoords = new();
-        int[,] arr = new int[1000, 1000];
-        static List<int> listOfLowest = new();
+        readonly int[,] arr = new int[1000, 1000];
+        static readonly List<int> listOfLowest = new();
 
         public override async Task ReadInput()
         {
@@ -19,7 +19,6 @@ namespace AdventOfCode
 
             arrSizeX = coordPoints.First().Length;
             arrSizeY = coordPoints.Count;
-            int[,] arr2 = new int[arrSizeX, arrSizeY];
             var yVal = 0;
 
             foreach (var line in coordPoints)
